@@ -1,942 +1,554 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Abdullah Al Faruque Ahmed | Civil Engineer</title>
-
-<script src="https://cdn.tailwindcss.com"></script>
-
-<link rel="stylesheet"
-
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
-<link
-
-href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-
-rel="stylesheet">
-
-<script>
-
-tailwind.config={
-
-theme:{
-
-extend:{
-
-colors:{
-
-primary:"#1d4ed8",
-
-secondary:"#0284c7",
-
-accent:"#059669",
-
-dark:"#0f172a",
-
-light:"#f1f5f9",
-
-border:"#e2e8f0"
-
-},
-
-fontFamily:{
-
-sans:['Inter']
-
-}
-
-}
-
-}
-
-}
-
-</script>
-
-<style>
-
-html{
-
-scroll-behavior:smooth;
-
-}
-
-
-.section-title{
-
-position:relative;
-
-padding-bottom:12px;
-
-font-weight:700;
-
-}
-
-
-.section-title:after{
-
-content:'';
-
-position:absolute;
-
-width:70px;
-
-height:4px;
-
-background:linear-gradient(90deg,#0284c7,#059669);
-
-bottom:0;
-
-left:0;
-
-border-radius:6px;
-
-}
-
-
-.timeline-item{
-
-position:relative;
-
-padding-left:30px;
-
-border-left:2px solid #e2e8f0;
-
-}
-
-
-.timeline-item:before{
-
-content:'';
-
-position:absolute;
-
-left:-8px;
-
-top:10px;
-
-width:15px;
-
-height:15px;
-
-background:#0284c7;
-
-border-radius:50%;
-
-border:3px solid white;
-
-box-shadow:0 0 0 3px #e2e8f0;
-
-}
-
-
-.card-hover{
-
-transition:.35s;
-
-border:1px solid #e2e8f0;
-
-}
-
-
-.card-hover:hover{
-
-transform:translateY(-6px);
-
-box-shadow:0 20px 40px rgba(0,0,0,.08);
-
-border-color:#0284c7;
-
-}
-
-
-.skill-bar{
-
-transition:width 1.3s cubic-bezier(.4,0,.2,1);
-
-background:linear-gradient(90deg,#0284c7,#059669);
-
-}
-
-
-.btn-main{
-
-background:linear-gradient(90deg,#1d4ed8,#0284c7);
-
-}
-
-
-.btn-main:hover{
-
-background:linear-gradient(90deg,#1e40af,#0369a1);
-
-}
-
-
-</style>
-
+    <base target="_self">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdullah Al Faruque Ahmed | Civil Engineering Portfolio</title>
+    <meta name="description" content="Civil Engineering undergraduate with strong academic performance and hands-on exposure to highway construction and structural site practices.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Slab:wght@400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0f4c75",      // Deeper navy blue
+                        secondary: "#28a745",    // Fresh green
+                        accent: "#17a2b8",       // Teal accent
+                        dark: "#1a1a1a",         // Almost black
+                        light: "#f1f5f9"         // Softer light
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'serif': ['Roboto Slab', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .section-title {
+            position: relative;
+            padding-bottom: 0.75rem;
+        }
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #28a745, #17a2b8);
+            border-radius: 2px;
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 2rem;
+        }
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #28a745, #17a2b8);
+            box-shadow: 0 0 0 4px rgba(255,255,255,0.8);
+        }
+        .skill-bar {
+            transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255,255,255,0.5);
+        }
+        .card-hover:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(40, 167, 69, 0.15);
+            border-color: rgba(23, 162, 184, 0.3);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #e3f2fd 0%, #e8f5e8 50%, #e0f7fa 100%);
+        }
+    </style>
 </head>
-
-
-<body class="bg-gray-50 font-sans text-gray-800">
-
-
-<header class="sticky top-0 bg-white shadow-sm z-50">
-
-<div class="container mx-auto px-6 py-4 flex justify-between items-center">
-
-<div>
-
-<h1 class="text-2xl font-bold text-primary">
-
-Abdullah Al Faruque Ahmed
-
-</h1>
-
-<p class="text-gray-600">
-
-Civil Engineering Undergraduate | Infrastructure Enthusiast
-
-</p>
-
-</div>
-
-
-<nav>
-
-<ul id="nav-list"
-
-class="flex gap-8 text-gray-700 font-medium">
-
-</ul>
-
-</nav>
-
-
-<a href="#contact"
-
-class="btn-main text-white px-5 py-2 rounded-lg shadow">
-
-Contact
-
-</a>
-
-</div>
-
-</header>
-
-
-
-<section id="home"
-
-class="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50 border-b">
-
-<div class="container mx-auto px-6 grid md:grid-cols-2 gap-10">
-
-
-<div>
-
-<h2
-
-class="text-5xl font-bold text-dark mb-6">
-
-Civil Engineering Portfolio
-
-</h2>
-
-
-<p
-
-class="text-lg text-gray-700 mb-8">
-
-Civil Engineering undergraduate with exposure to highway construction,
-
-structural practices and AutoCAD design.
-
-Actively seeking engineering internship opportunities.
-
-</p>
-
-
-<div class="flex gap-5">
-
-<a href="#projects"
-
-class="btn-main text-white px-7 py-3 rounded-lg">
-
-Projects
-
-</a>
-
-
-<a href="#contact"
-
-class="border border-primary text-primary
-
-px-7 py-3 rounded-lg hover:bg-blue-50">
-
-Contact
-
-</a>
-
-</div>
-
-
-<div class="mt-10 space-y-3">
-
-<p>
-
-<i class="fas fa-phone text-secondary"></i>
-
-+91 9101602688
-
-</p>
-
-
-<p>
-
-<i class="fas fa-envelope text-secondary"></i>
-
-abdullahalfaruqueahmed46@gmail.com
-
-</p>
-
-</div>
-
-
-</div>
-
-
-
-<div class="bg-white p-8 rounded-xl shadow-md card-hover">
-
-<h3 class="text-xl font-bold mb-4">
-
-Professional Summary
-
-</h3>
-
-
-<p class="text-gray-700 mb-4">
-
-Strong academic record with hands-on exposure to highway engineering,
-
-site workflow and technical documentation.
-
-</p>
-
-
-<p class="text-gray-700">
-
-Interested in infrastructure and construction engineering roles.
-
-</p>
-
-
-<div class="mt-6 border-t pt-6">
-
-<h4 class="font-semibold mb-3">
-
-Core Expertise
-
-</h4>
-
-
-<div id="expertise-tags"
-
-class="flex flex-wrap gap-3">
-
-</div>
-
-</div>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-<main class="container mx-auto px-6 py-20">
-
-
-<section id="experience"
-
-class="mb-20">
-
-<h2
-
-class="text-3xl mb-10 section-title">
-
-Experience
-
-</h2>
-
-
-<div id="timeline-container"
-
-class="space-y-8">
-
-</div>
-
-</section>
-
-
-
-<section id="skills"
-
-class="mb-20">
-
-<h2
-
-class="text-3xl mb-10 section-title">
-
-Skills
-
-</h2>
-
-
-<div class="grid md:grid-cols-2 gap-10">
-
-
-<div class="bg-white p-7 rounded-xl shadow card-hover">
-
-<h3 class="text-xl font-bold mb-6">
-
-Technical Skills
-
-</h3>
-
-
-<div id="technical-skills"
-
-class="space-y-6">
-
-</div>
-
-</div>
-
-
-
-<div class="bg-white p-7 rounded-xl shadow card-hover">
-
-<h3 class="text-xl font-bold mb-6">
-
-Professional Skills
-
-</h3>
-
-
-<div id="soft-skills"
-
-class="space-y-6">
-
-</div>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-<section id="projects"
-
-class="mb-20">
-
-<h2
-
-class="text-3xl mb-10 section-title">
-
-Projects
-
-</h2>
-
-
-<div class="grid md:grid-cols-2 gap-8">
-
-
-<div class="bg-white rounded-xl shadow card-hover p-7">
-
-<h3 class="text-xl font-bold mb-3">
-
-CSEB Compression Mould
-
-</h3>
-
-
-<p class="text-gray-700 mb-4">
-
-Designed interchangeable mould system
-
-for cost-effective sustainable construction.
-
-</p>
-
-
-<div>
-
-<span
-
-class="bg-green-100 text-green-800
-
-px-3 py-1 rounded-full text-sm">
-
-Sustainability
-
-</span>
-
-
-<span
-
-class="bg-blue-100 text-blue-800
-
-px-3 py-1 rounded-full text-sm ml-2">
-
-Design
-
-</span>
-
-</div>
-
-</div>
-
-
-
-<div class="bg-white rounded-xl shadow card-hover p-7">
-
-<h3 class="font-bold mb-2">
-
-Academic Technical Report
-
-</h3>
-
-
-<p class="text-gray-700 text-sm">
-
-Prepared technical report of G+7 building
-
-site visit and footing design using AutoCAD.
-
-</p>
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-<section id="workshops"
-
-class="mb-20">
-
-<h2
-
-class="text-3xl mb-10 section-title">
-
-Certifications
-
-</h2>
-
-
-<div id="workshops-container"
-
-class="grid md:grid-cols-2 gap-6">
-
-</div>
-
-</section>
-
-
-
-<section id="contact">
-
-<h2
-
-class="text-3xl mb-10 section-title">
-
-Contact
-
-</h2>
-
-
-<div class="bg-white p-10 rounded-xl shadow-lg">
-
-<div class="grid md:grid-cols-2 gap-10">
-
-
-<div>
-
-<h3 class="font-bold text-xl mb-6">
-
-Contact Info
-
-</h3>
-
-
-<p class="mb-4">
-
-<i class="fas fa-phone text-primary"></i>
-
-+91 9101602688
-
-</p>
-
-
-<p class="mb-4">
-
-<i class="fas fa-envelope text-primary"></i>
-
-abdullahalfaruqueahmed46@gmail.com
-
-</p>
-
-
-<p>
-
-<i class="fas fa-map-marker-alt text-primary"></i>
-
-India
-
-</p>
-
-</div>
-
-
-
-<div>
-
-<form id="contact-form"
-
-class="space-y-4">
-
-
-<input
-
-placeholder="Name"
-
-class="w-full border p-3 rounded-lg">
-
-
-<input
-
-placeholder="Email"
-
-class="w-full border p-3 rounded-lg">
-
-
-<textarea
-
-rows="4"
-
-placeholder="Message"
-
-class="w-full border p-3 rounded-lg">
-
-</textarea>
-
-
-<button
-
-class="btn-main w-full text-white py-3 rounded-lg">
-
-Send Message
-
-</button>
-
-
-</form>
-
-</div>
-
-
-</div>
-
-</div>
-
-</section>
-
-
-</main>
-
-
-
-<footer
-
-class="bg-dark text-white py-10 mt-20">
-
-<div
-
-class="container mx-auto px-6 text-center">
-
-<p class="text-gray-300">
-
-© 2026 Abdullah Ahmed
-
-</p>
-
-<p class="text-gray-400 text-sm mt-2">
-
-Civil Engineering Portfolio
-
-</p>
-
-</div>
-
-</footer>
-
-
-
-<script>
-
-
-const navigationItems=[
-
-{label:"Home",href:"#home"},
-
-{label:"Experience",href:"#experience"},
-
-{label:"Skills",href:"#skills"},
-
-{label:"Projects",href:"#projects"},
-
-{label:"Certifications",href:"#workshops"},
-
-{label:"Contact",href:"#contact"}
-
-];
-
-
-const expertiseTags=[
-
-"Highway Construction",
-
-"AutoCAD",
-
-"Structural Basics",
-
-"Technical Documentation",
-
-"Site Engineering"
-
-];
-
-
-const timelineData=[
-
-{
-
-year:"2023-Present",
-
-title:"NH Internship",
-
-description:"Exposure to highway construction workflow and materials.",
-
-icon:"fas fa-road"
-
-}
-
-];
-
-
-const technicalSkills=[
-
-{name:"AutoCAD",level:90},
-
-{name:"Excel",level:85},
-
-{name:"SAP2000",level:70},
-
-{name:"Fusion360",level:75}
-
-];
-
-
-const softSkills=[
-
-{name:"Problem Solving",level:90},
-
-{name:"Teamwork",level:85},
-
-{name:"Documentation",level:88}
-
-];
-
-
-const workshops=[
-
-{
-
-title:"GIS Certification",
-
-description:"GIS engineering applications",
-
-badge:"Certified"
-
-}
-
-];
-
-
-
-function renderNav(){
-
-nav-list.innerHTML=navigationItems
-
-.map(i=>`<li>
-
-<a href="${i.href}"
-
-class="hover:text-primary">
-
-${i.label}
-
-</a>
-
-</li>`).join('');
-
-}
-
-
-function renderTags(){
-
-expertise-tags.innerHTML=expertiseTags
-
-.map(t=>`<span
-
-class="bg-blue-100 text-primary
-
-px-3 py-1 rounded-full text-sm">
-
-${t}
-
-</span>`).join('');
-
-}
-
-
-function renderTimeline(){
-
-timeline-container.innerHTML=
-
-timelineData.map(i=>`
-
-<div class="timeline-item">
-
-<div class="bg-white p-6 rounded-xl shadow card-hover">
-
-<h3 class="font-bold">
-
-${i.title}
-
-</h3>
-
-<span class="text-secondary">
-
-${i.year}
-
-</span>
-
-<p class="mt-2 text-gray-700">
-
-${i.description}
-
-</p>
-
-</div>
-
-</div>
-
-`).join('');
-
-}
-
-
-function renderSkills(arr,id){
-
-document.getElementById(id)
-
-.innerHTML=arr.map(s=>`
-
-<div>
-
-<div class="flex justify-between">
-
-<span>${s.name}</span>
-
-<span>${s.level}%</span>
-
-</div>
-
-<div class="h-2 bg-gray-200 rounded">
-
-<div class="skill-bar h-2 rounded"
-
-data-level="${s.level}"
-
-style="width:0%">
-
-</div>
-
-</div>
-
-</div>
-
-`).join('');
-
-}
-
-
-document.addEventListener("DOMContentLoaded",()=>{
-
-renderNav();
-
-renderTags();
-
-renderTimeline();
-
-renderSkills(technicalSkills,"technical-skills");
-
-renderSkills(softSkills,"soft-skills");
-
-
-setTimeout(()=>{
-
-document
-
-.querySelectorAll(".skill-bar")
-
-.forEach(b=>{
-
-b.style.width=
-
-b.dataset.level+"%";
-
-});
-
-},300);
-
-});
-
-
-</script>
-
-
-
+<body class="min-h-screen bg-gradient-to-br from-gray-50 to-light font-sans text-gray-800">
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-100">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex flex-col lg:flex-row justify-between items-center gap-6">
+                <div class="mb-4 lg:mb-0">
+                    <h1 class="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                        Abdullah Al Faruque Ahmed
+                    </h1>
+                    <p class="text-gray-600 font-medium">Civil Engineering Undergraduate</p>
+                </div>
+                <nav>
+                    <ul id="nav-list" class="flex flex-wrap gap-4 lg:gap-6"></ul>
+                </nav>
+                <div class="mt-4 lg:mt-0">
+                    <a href="#contact" class="inline-flex items-center gap-2 bg-gradient-to-r from-primary to-secondary text-white px-6 py-3 rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-300 font-semibold">
+                        <i class="fas fa-envelope"></i>
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="py-16 lg:py-24 hero-gradient">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+                <div class="lg:w-1/2">
+                    <div class="mb-8">
+                        <h2 class="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+                            <span class="bg-gradient-to-r from-dark via-primary to-secondary bg-clip-text text-transparent">
+                                Civil Engineering
+                            </span>
+                            <span class="block text-2xl lg:text-3xl text-gray-600 font-light mt-2">Professional</span>
+                        </h2>
+                        <p class="text-xl text-gray-700 mb-8 leading-relaxed max-w-lg">Undergraduate with strong academic performance and hands-on exposure to highway construction and structural site practices.</p>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#projects" class="bg-gradient-to-r from-primary to-secondary text-white px-8 py-4 rounded-xl hover:shadow-xl transition-all duration-300 font-semibold shadow-md">View Projects</a>
+                            <a href="#contact" class="border-2 border-primary text-primary px-8 py-4 rounded-xl hover:bg-primary hover:text-white transition-all duration-300 font-semibold backdrop-blur-sm">Get In Touch</a>
+                        </div>
+                    </div>
+                    <div class="space-y-4 pt-4 border-t border-gray-200">
+                        <div class="flex items-center gap-4 p-3 bg-white/50 rounded-xl backdrop-blur-sm">
+                            <div class="w-10 h-10 bg-gradient-to-r from-secondary to-accent rounded-xl flex items-center justify-center">
+                                <i class="fas fa-phone text-white"></i>
+                            </div>
+                            <span class="text-lg font-semibold text-gray-800">+91 9101602688</span>
+                        </div>
+                        <div class="flex items-center gap-4 p-3 bg-white/50 rounded-xl backdrop-blur-sm">
+                            <div class="w-10 h-10 bg-gradient-to-r from-secondary to-accent rounded-xl flex items-center justify-center">
+                                <i class="fas fa-envelope text-white"></i>
+                            </div>
+                            <span class="text-lg font-semibold text-gray-800 break-all">abdullahalfaruqueahmed46@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="bg-white/80 backdrop-blur-xl rounded-2xl shadow-2xl p-8 lg:p-10 card-hover border border-white/50">
+                        <h3 class="text-2xl font-bold text-dark mb-6 flex items-center gap-3">
+                            <i class="fas fa-briefcase text-secondary"></i>
+                            Professional Summary
+                        </h3>
+                        <p class="text-gray-700 mb-6 leading-relaxed">Civil Engineering undergraduate with strong academic performance and hands-on exposure to highway construction and structural site practices. Experienced in technical documentation, AutoCAD-based design etc.</p>
+                        <p class="text-gray-700 mb-8 leading-relaxed">Seeking opportunities to apply analytical and engineering skills in infrastructure and construction-focused roles.</p>
+                        <div class="pt-8 border-t border-gray-200">
+                            <h4 class="font-bold text-xl text-dark mb-4">Key Expertise</h4>
+                            <div id="expertise-tags" class="flex flex-wrap gap-2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-16 lg:py-20">
+        <!-- Internship Experience -->
+        <section id="experience" class="mb-20 lg:mb-24">
+            <h2 class="text-4xl lg:text-5xl font-bold text-dark mb-12 section-title text-center">Internship Experience</h2>
+            <div id="timeline-container" class="max-w-4xl mx-auto space-y-10"></div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="mb-20 lg:mb-24">
+            <h2 class="text-4xl lg:text-5xl font-bold text-dark mb-12 section-title text-center">Skills & Expertise</h2>
+            <div class="grid grid-cols-1 xl:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto">
+                <!-- Technical Skills -->
+                <div class="bg-gradient-to-br from-white to-light rounded-2xl shadow-xl p-8 card-hover">
+                    <h3 class="text-2xl font-bold text-dark mb-8 flex items-center gap-4">
+                        <i class="fas fa-laptop-code text-secondary text-2xl"></i>
+                        Technical Skills
+                    </h3>
+                    <div id="technical-skills" class="space-y-6"></div>
+                </div>
+                
+                <!-- Soft Skills -->
+                <div class="bg-gradient-to-br from-white to-light rounded-2xl shadow-xl p-8 card-hover">
+                    <h3 class="text-2xl font-bold text-dark mb-8 flex items-center gap-4">
+                        <i class="fas fa-users text-accent text-2xl"></i>
+                        Soft Skills
+                    </h3>
+                    <div id="soft-skills" class="space-y-6"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="mb-20 lg:mb-24">
+            <h2 class="text-4xl lg:text-5xl font-bold text-dark mb-12 section-title text-center">Projects & Academic Work</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto">
+                <!-- Main Project -->
+                <div class="bg-gradient-to-br from-white to-light rounded-2xl shadow-xl overflow-hidden card-hover group">
+                    <div class="p-8 lg:p-10">
+                        <h3 class="text-2xl font-bold text-dark mb-4 group-hover:text-primary transition-colors">Interchangeable CSEB Compression Mould Design</h3>
+                        <p class="text-gray-700 mb-6 leading-relaxed">Designed a modular, interchangeable compression mould for producing CSEBs of multiple sizes using a single system.</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check text-accent mt-1 text-xl"></i>
+                                <span class="font-medium">Focus on sustainability and cost reduction</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check text-accent mt-1 text-xl"></i>
+                                <span class="font-medium">Applicable in low-cost housing construction</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-check text-accent mt-1 text-xl"></i>
+                                <span class="font-medium">Modular design for multiple block sizes</span>
+                            </li>
+                        </ul>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="inline-block bg-green-100/80 text-green-800 text-sm font-bold px-4 py-2 rounded-full backdrop-blur-sm">Sustainability Focus</span>
+                            <span class="inline-block bg-teal-100/80 text-teal-800 text-sm font-bold px-4 py-2 rounded-full backdrop-blur-sm">Innovation</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Academic Experience -->
+                <div class="bg-gradient-to-br from-white to-light rounded-2xl shadow-xl overflow-hidden card-hover">
+                    <div class="p-8 lg:p-10">
+                        <h3 class="text-2xl font-bold text-dark mb-6">Academic Experience</h3>
+                        <div class="space-y-6">
+                            <div class="p-6 bg-gray-50/50 rounded-xl">
+                                <h4 class="font-bold text-xl text-dark mb-2">Technical Report - G+7 Residential Building</h4>
+                                <p class="text-gray-700">Prepared a technical report on a G+7 residential building site visit under Dr. B. K. Narzary, Tezpur University.</p>
+                            </div>
+                            <div class="p-6 bg-gray-50/50 rounded-xl">
+                                <h4 class="font-bold text-xl text-dark mb-2">Residential Footing Layout Design</h4>
+                                <p class="text-gray-700">Designed residential footing layout using AutoCAD 2025.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Workshops & Certifications -->
+        <section id="workshops" class="mb-20 lg:mb-24">
+            <h2 class="text-4xl lg:text-5xl font-bold text-dark mb-12 section-title text-center">Workshops & Certifications</h2>
+            <div id="workshops-container" class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto"></div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="mb-20 lg:mb-24">
+            <h2 class="text-4xl lg:text-5xl font-bold text-dark mb-12 section-title text-center">Get In Touch</h2>
+            <div class="bg-gradient-to-br from-white to-light rounded-3xl shadow-2xl p-10 lg:p-12 max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+                    <div>
+                        <h3 class="text-2xl font-bold text-dark mb-8 flex items-center gap-3">
+                            <i class="fas fa-address-book text-secondary text-2xl"></i>
+                            Contact Information
+                        </h3>
+                        <div class="space-y-8">
+                            <div class="flex items-start gap-6 p-6 bg-gradient-to-r from-secondary/10 to-accent/10 rounded-2xl backdrop-blur-sm border border-white/50">
+                                <div class="w-14 h-14 bg-gradient-to-r from-secondary to-accent rounded-2xl flex items-center justify-center shadow-lg">
+                                    <i class="fas fa-phone text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-xl text-dark mb-2">Phone</h4>
+                                    <p class="text-2xl font-bold text-gray-800">+91 9101602688</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-6 p-6 bg-gradient-to-r from-secondary/10 to-accent/10 rounded-2xl backdrop-blur-sm border border-white/50">
+                                <div class="w-14 h-14 bg-gradient-to-r from-secondary to-accent rounded-2xl flex items-center justify-center shadow-lg">
+                                    <i class="fas fa-envelope text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-xl text-dark mb-2">Email</h4>
+                                    <p class="text-lg font-semibold text-gray-800 break-all">abdullahalfaruqueahmed46@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-6 p-6 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl backdrop-blur-sm border border-white/50">
+                                <div class="w-14 h-14 bg-gradient-to-r from-primary to-secondary rounded-2xl flex items-center justify-center shadow-lg">
+                                    <i class="fas fa-map-marker-alt text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-xl text-dark mb-2">Location</h4>
+                                    <p class="text-xl font-semibold text-gray-800">India</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-dark mb-8 flex items-center gap-3">
+                            <i class="fas fa-paper-plane text-accent text-2xl"></i>
+                            Send a Message
+                        </h3>
+                        <form id="contact-form" class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-lg font-semibold text-gray-700 mb-3">Full Name</label>
+                                <input type="text" id="name" class="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-secondary/20 focus:border-secondary text-lg transition-all duration-300" placeholder="Enter your name" required>
+                            </div>
+                            <div>
+                                <label for="email" class="block text-lg font-semibold text-gray-700 mb-3">Email Address</label>
+                                <input type="email" id="email" class="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-secondary/20 focus:border-secondary text-lg transition-all duration-300" placeholder="your@email.com" required>
+                            </div>
+                            <div>
+                                <label for="message" class="block text-lg font-semibold text-gray-700 mb-3">Message</label>
+                                <textarea id="message" rows="5" class="w-full px-6 py-4 border-2 border-gray-200 rounded-xl focus:ring-4 focus:ring-secondary/20 focus:border-secondary text-lg transition-all duration-300 resize-vertical" placeholder="Tell me about your project..."></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-gradient-to-r from-primary to-secondary text-white py-5 rounded-2xl hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 font-bold text-lg shadow-lg">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-dark to-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 text-center lg:text-left">
+                <div>
+                    <h3 class="text-2xl lg:text-3xl font-bold mb-4 bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">
+                        Abdullah Al Faruque Ahmed
+                    </h3>
+                    <p class="text-xl text-gray-300 font-medium">Civil Engineering Portfolio</p>
+                </div>
+                <div class="lg:text-center">
+                    <p class="text-lg text-gray-300 leading-relaxed max-w-md mx-auto lg:mx-0">Seeking opportunities in infrastructure and construction-focused roles.</p>
+                </div>
+                <div class="lg:text-right">
+                    <p class="text-gray-400 text-lg">© <span id="current-year"></span> All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Data layer (unchanged)
+        const navigationItems = [
+            { "label": "Home", "href": "#home" },
+            { "label": "Experience", "href": "#experience" },
+            { "label": "Skills", "href": "#skills" },
+            { "label": "Projects", "href": "#projects" },
+            { "label": "Workshops", "href": "#workshops" },
+            { "label": "Contact", "href": "#contact" }
+        ];
+
+        const expertiseTags = [
+            "Highway Construction", "Structural Engineering", "AutoCAD Design", 
+            "Technical Documentation", "Site Practices", "Infrastructure Planning"
+        ];
+
+        const timelineData = [
+            { 
+                "year": "2023 – Present", 
+                "title": "National Highway Infra Trust (NHIT) — Winter Internship",
+                "description": "Exposure to highway engineering practices and on-site execution for NH-27. Observed construction sequencing, safety protocols, and material utilization.",
+                "icon": "fas fa-road"
+            },
+            { 
+                "year": "2020 – 2022", 
+                "title": "Academic Projects & Research",
+                "description": "Focused on academic coursework, technical documentation, and engineering design projects during undergraduate studies.",
+                "icon": "fas fa-graduation-cap"
+            },
+            { 
+                "year": "2015 – 2020", 
+                "title": "Foundation & Preparatory Years",
+                "description": "Built foundational knowledge in mathematics, physics, and engineering principles leading to civil engineering specialization.",
+                "icon": "fas fa-book"
+            }
+        ];
+
+        const technicalSkills = [
+            { "name": "AutoCAD", "level": 90 },
+            { "name": "MS Excel", "level": 85 },
+            { "name": "Fusion360", "level": 75 },
+            { "name": "SAP2000", "level": 70 },
+            { "name": "C Programming", "level": 80 },
+            { "name": "Canva", "level": 85 }
+        ];
+
+        const softSkills = [
+            { "name": "Technical Documentation", "level": 90 },
+            { "name": "Problem-solving", "level": 88 },
+            { "name": "Teamwork", "level": 85 },
+            { "name": "Time Management", "level": 87 },
+            { "name": "Analytical Thinking", "level": 90 }
+        ];
+
+        const workshops = [
+            { 
+                "title": "GIS Workshop", 
+                "description": "Certified in Geographic Information Systems for engineering applications.",
+                "icon": "fas fa-map",
+                "badge": "Certified"
+            },
+            { 
+                "title": "IIT Guwahati — GIAN Course", 
+                "description": "5-Day course on advanced engineering topics at Indian Institute of Technology Guwahati.",
+                "icon": "fas fa-university",
+                "badge": "5-Day Course"
+            }
+        ];
+
+        // Updated render functions with better styling
+        function renderNavItems(items) {
+            return items.map(item => 
+                `<li><a href="${item.href}" class="text-gray-700 hover:text-primary font-semibold transition-all duration-300 hover:scale-110 px-2 py-1 rounded-lg hover:bg-secondary/10">${item.label}</a></li>`
+            ).join("");
+        }
+
+        function renderExpertiseTags(tags) {
+            return tags.map(tag => 
+                `<span class="bg-gradient-to-r from-primary/20 to-secondary/20 text-primary text-base font-semibold px-5 py-2 rounded-full backdrop-blur-sm border border-primary/30 hover:bg-primary/30 transition-all duration-300">${tag}</span>`
+            ).join("");
+        }
+
+        function renderTimeline(items) {
+            return items.map(item => `
+                <div class="timeline-item">
+                    <div class="bg-gradient-to-br from-white to-light rounded-2xl shadow-xl p-8 lg:p-10 card-hover group">
+                        <div class="flex items-start justify-between mb-6 pb-6 border-b border-gray-100">
+                            <div class="flex items-center gap-4">
+                                <div class="w-14 h-14 bg-gradient-to-r from-secondary to-accent rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-300">
+                                    <i class="${item.icon} text-white text-xl"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl lg:text-2xl font-bold text-dark group-hover:text-primary transition-colors">${item.title}</h3>
+                                    <span class="text-secondary font-bold text-lg bg-secondary/20 px-4 py-2 rounded-full">${item.year}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-gray-700 text-lg leading-relaxed">${item.description}</p>
+                    </div>
+                </div>
+            `).join("");
+        }
+
+        function renderSkillBars(skills, type) {
+            const color = type === 'technical' ? 'secondary' : 'accent';
+            return skills.map(skill => `
+                <div>
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="font-semibold text-lg text-dark">${skill.name}</span>
+                        <span class="text-${color} font-bold text-xl">${skill.level}%</span>
+                    </div>
+                    <div class="h-3 bg-gray-200 rounded-full overflow-hidden shadow-inner">
+                        <div class="skill-bar h-full rounded-full bg-${color} shadow-md" 
+                             data-level="${skill.level}" style="width: 0%"></div>
+                    </div>
+                </div>
+            `).join("");
+        }
+
+        function renderWorkshops(items) {
+            return items.map(item => `
+                <div class="bg-gradient-to-br from-white to-light rounded-2xl shadow-xl p-8 card-hover group">
+                    <div class="flex items-start justify-between mb-6 pb-6 border-b border-gray-100">
+                        <div class="flex items-center gap-4">
+                            <div class="w-14 h-14 bg-gradient-to-r from-primary to-${item.icon.includes('map') ? 'accent' : 'secondary'} rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-all duration-300">
+                                <i class="${item.icon} text-white text-xl"></i>
+                            </div>
+                            <h3 class="text-xl lg:text-2xl font-bold text-dark group-hover:text-primary transition-colors">${item.title}</h3>
+                        </div>
+                        <span class="bg-gradient-to-r from-green-400 to-green-600 text-white text-sm font-bold px-4 py-2 rounded-xl shadow-lg">${item.badge}</span>
+                    </div>
+                    <p class="text-gray-700 text-lg leading-relaxed">${item.description}</p>
+                </div>
+            `).join("");
+        }
+
+        // Initialize page content (enhanced)
+        document.addEventListener("DOMContentLoaded", function() {
+            // Set current year
+            document.getElementById("current-year").textContent = new Date().getFullYear();
+            
+            // Render navigation
+            document.getElementById("nav-list").innerHTML = renderNavItems(navigationItems);
+            
+            // Render expertise tags
+            document.getElementById("expertise-tags").innerHTML = renderExpertiseTags(expertiseTags);
+            
+            // Render timeline
+            document.getElementById("timeline-container").innerHTML = renderTimeline(timelineData);
+            
+            // Render skills
+            document.getElementById("technical-skills").innerHTML = renderSkillBars(technicalSkills, 'technical');
+            document.getElementById("soft-skills").innerHTML = renderSkillBars(softSkills, 'soft');
+            
+            // Render workshops
+            document.getElementById("workshops-container").innerHTML = renderWorkshops(workshops);
+            
+            // Animate skill bars with stagger effect
+            setTimeout(() => {
+                document.querySelectorAll('.skill-bar').forEach((bar, index) => {
+                    setTimeout(() => {
+                        const level = bar.getAttribute('data-level');
+                        bar.style.width = `${level}%`;
+                    }, index * 100);
+                });
+            }, 500);
+            
+            // Enhanced contact form handling
+            document.getElementById("contact-form").addEventListener("submit", function(e) {
+                e.preventDefault();
+                
+                const name = document.getElementById("name").value;
+                const email = document.getElementById("email").value;
+                const message = document.getElementById("message").value;
+                const submitBtn = this.querySelector('button[type="submit"]');
+                
+                // Show loading state
+                const originalText = submitBtn.innerHTML;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
+                submitBtn.disabled = true;
+                
+                // Simulate API call
+                setTimeout(() => {
+                    alert(`Thank you ${name}! Your message has been received. I'll get back to you at ${email} soon.`);
+                    this.reset();
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                }, 1500);
+            });
+            
+            // Enhanced smooth scrolling
+            document.addEventListener("click", function(event) {
+                const link = event.target.closest("a[href^='#']");
+                if (!link) return;
+                
+                const targetId = link.getAttribute("href");
+                if (targetId === "#") return;
+                
+                event.preventDefault();
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: "smooth"
+                    });
+                }
+            });
+
+            // Add scroll-triggered animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-fadeInUp');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.card-hover, .timeline-item, #expertise-tags span').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
 </body>
-
 </html>

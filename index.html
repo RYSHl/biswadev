@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
 
 <head>
 
@@ -7,33 +8,47 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Civil Engineer Portfolio</title>
+<title>Abdullah Al Faruque Ahmed | Civil Engineer</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
 
 <link rel="stylesheet"
 
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+<link
+
+href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+
+rel="stylesheet">
 
 <script>
 
-tailwind.config = {
+tailwind.config={
 
-theme: {
+theme:{
 
-extend: {
+extend:{
 
-colors: {
+colors:{
 
-primary:"#020617",
+primary:"#1d4ed8",
 
-card:"#0b1120",
+secondary:"#0284c7",
 
-accent:"#06b6d4",
+accent:"#059669",
 
-highlight:"#38bdf8",
+dark:"#0f172a",
 
-text:"#e2e8f0"
+light:"#f1f5f9",
+
+border:"#e2e8f0"
+
+},
+
+fontFamily:{
+
+sans:['Inter']
 
 }
 
@@ -45,174 +60,305 @@ text:"#e2e8f0"
 
 </script>
 
+<style>
+
+html{
+
+scroll-behavior:smooth;
+
+}
+
+
+.section-title{
+
+position:relative;
+
+padding-bottom:12px;
+
+font-weight:700;
+
+}
+
+
+.section-title:after{
+
+content:'';
+
+position:absolute;
+
+width:70px;
+
+height:4px;
+
+background:linear-gradient(90deg,#0284c7,#059669);
+
+bottom:0;
+
+left:0;
+
+border-radius:6px;
+
+}
+
+
+.timeline-item{
+
+position:relative;
+
+padding-left:30px;
+
+border-left:2px solid #e2e8f0;
+
+}
+
+
+.timeline-item:before{
+
+content:'';
+
+position:absolute;
+
+left:-8px;
+
+top:10px;
+
+width:15px;
+
+height:15px;
+
+background:#0284c7;
+
+border-radius:50%;
+
+border:3px solid white;
+
+box-shadow:0 0 0 3px #e2e8f0;
+
+}
+
+
+.card-hover{
+
+transition:.35s;
+
+border:1px solid #e2e8f0;
+
+}
+
+
+.card-hover:hover{
+
+transform:translateY(-6px);
+
+box-shadow:0 20px 40px rgba(0,0,0,.08);
+
+border-color:#0284c7;
+
+}
+
+
+.skill-bar{
+
+transition:width 1.3s cubic-bezier(.4,0,.2,1);
+
+background:linear-gradient(90deg,#0284c7,#059669);
+
+}
+
+
+.btn-main{
+
+background:linear-gradient(90deg,#1d4ed8,#0284c7);
+
+}
+
+
+.btn-main:hover{
+
+background:linear-gradient(90deg,#1e40af,#0369a1);
+
+}
+
+
+</style>
+
 </head>
 
-<body class="bg-primary text-text">
+
+<body class="bg-gray-50 font-sans text-gray-800">
 
 
-<!-- NAVBAR -->
+<header class="sticky top-0 bg-white shadow-sm z-50">
 
-<header class="border-b border-slate-800">
+<div class="container mx-auto px-6 py-4 flex justify-between items-center">
 
-<div class="max-w-6xl mx-auto flex justify-between p-6">
+<div>
 
-<h1 class="text-2xl font-bold text-accent">
+<h1 class="text-2xl font-bold text-primary">
 
-Abdullah Ahmed
+Abdullah Al Faruque Ahmed
 
 </h1>
 
+<p class="text-gray-600">
 
-<nav class="space-x-8 text-gray-300">
+Civil Engineering Undergraduate | Infrastructure Enthusiast
 
-<a href="#" class="hover:text-accent">Home</a>
+</p>
 
-<a href="#">Experience</a>
+</div>
 
-<a href="#">Projects</a>
 
-<a href="#">Skills</a>
+<nav>
 
-<a href="#">Contact</a>
+<ul id="nav-list"
+
+class="flex gap-8 text-gray-700 font-medium">
+
+</ul>
 
 </nav>
+
+
+<a href="#contact"
+
+class="btn-main text-white px-5 py-2 rounded-lg shadow">
+
+Contact
+
+</a>
 
 </div>
 
 </header>
 
 
-<!-- HERO -->
 
-<section class="max-w-6xl mx-auto py-20 grid md:grid-cols-2 gap-10">
+<section id="home"
+
+class="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-cyan-50 border-b">
+
+<div class="container mx-auto px-6 grid md:grid-cols-2 gap-10">
+
 
 <div>
 
-<h2 class="text-5xl font-bold mb-6">
+<h2
 
-Civil Engineering
+class="text-5xl font-bold text-dark mb-6">
 
-<span class="text-accent">
-
-Portfolio
-
-</span>
+Civil Engineering Portfolio
 
 </h2>
 
 
-<p class="text-gray-400 mb-8">
+<p
 
-Civil Engineering undergraduate focused on sustainable construction,
+class="text-lg text-gray-700 mb-8">
 
-structural planning and infrastructure development.
+Civil Engineering undergraduate with exposure to highway construction,
 
-Passionate about solving real construction challenges.
+structural practices and AutoCAD design.
+
+Actively seeking engineering internship opportunities.
 
 </p>
 
 
-<div class="space-x-5">
+<div class="flex gap-5">
 
-<button class="bg-accent px-6 py-3 rounded">
+<a href="#projects"
 
-View Work
+class="btn-main text-white px-7 py-3 rounded-lg">
 
-</button>
+Projects
+
+</a>
 
 
-<button class="border border-accent px-6 py-3 rounded">
+<a href="#contact"
+
+class="border border-primary text-primary
+
+px-7 py-3 rounded-lg hover:bg-blue-50">
 
 Contact
 
-</button>
+</a>
 
 </div>
 
 
-<div class="mt-10 space-y-3 text-gray-400">
+<div class="mt-10 space-y-3">
 
 <p>
 
-<i class="fa fa-phone text-accent"></i>
+<i class="fas fa-phone text-secondary"></i>
 
-+91 XXXXXXXX
++91 9101602688
 
 </p>
 
 
 <p>
 
-<i class="fa fa-envelope text-accent"></i>
+<i class="fas fa-envelope text-secondary"></i>
 
-email@gmail.com
+abdullahalfaruqueahmed46@gmail.com
 
 </p>
 
 </div>
 
+
 </div>
 
 
 
-<div class="bg-card p-8 rounded-xl shadow-xl">
+<div class="bg-white p-8 rounded-xl shadow-md card-hover">
 
-<h3 class="text-2xl mb-4 text-accent">
+<h3 class="text-xl font-bold mb-4">
 
 Professional Summary
 
 </h3>
 
 
-<p class="text-gray-400">
+<p class="text-gray-700 mb-4">
 
-Strong academic background with exposure to highway
+Strong academic record with hands-on exposure to highway engineering,
 
-engineering, AutoCAD design and construction workflow.
-
-Interested in infrastructure development roles.
+site workflow and technical documentation.
 
 </p>
 
 
-<div class="mt-8">
+<p class="text-gray-700">
 
-<h4 class="mb-3">
+Interested in infrastructure and construction engineering roles.
 
-Core Areas
+</p>
+
+
+<div class="mt-6 border-t pt-6">
+
+<h4 class="font-semibold mb-3">
+
+Core Expertise
 
 </h4>
 
 
-<div class="flex flex-wrap gap-3">
+<div id="expertise-tags"
 
-<span class="bg-slate-800 px-3 py-1 rounded">
-
-AutoCAD
-
-</span>
-
-<span class="bg-slate-800 px-3 py-1 rounded">
-
-Highway Engineering
-
-</span>
-
-<span class="bg-slate-800 px-3 py-1 rounded">
-
-Structural Basics
-
-</span>
-
-<span class="bg-slate-800 px-3 py-1 rounded">
-
-Site Execution
-
-</span>
+class="flex flex-wrap gap-3">
 
 </div>
 
 </div>
+
+</div>
+
 
 </div>
 
@@ -220,56 +366,25 @@ Site Execution
 
 
 
-<!-- EXPERIENCE -->
+<main class="container mx-auto px-6 py-20">
 
-<section class="max-w-6xl mx-auto py-16">
 
-<h2 class="text-3xl mb-10 text-accent">
+<section id="experience"
+
+class="mb-20">
+
+<h2
+
+class="text-3xl mb-10 section-title">
 
 Experience
 
 </h2>
 
 
-<div class="grid gap-6">
+<div id="timeline-container"
 
-<div class="bg-card p-6 rounded-xl">
-
-<h3 class="text-xl">
-
-Highway Internship
-
-</h3>
-
-
-<p class="text-gray-400 mt-2">
-
-Worked on NH project exposure including
-
-material management and construction process.
-
-</p>
-
-</div>
-
-
-
-<div class="bg-card p-6 rounded-xl">
-
-<h3>
-
-Academic Engineering Work
-
-</h3>
-
-
-<p class="text-gray-400">
-
-Technical reports and structural observations.
-
-</p>
-
-</div>
+class="space-y-8">
 
 </div>
 
@@ -277,82 +392,55 @@ Technical reports and structural observations.
 
 
 
-<!-- SKILLS -->
+<section id="skills"
 
-<section class="max-w-6xl mx-auto py-16">
+class="mb-20">
 
-<h2 class="text-3xl mb-10 text-accent">
+<h2
+
+class="text-3xl mb-10 section-title">
 
 Skills
 
 </h2>
 
 
+<div class="grid md:grid-cols-2 gap-10">
 
-<div class="grid md:grid-cols-3 gap-6">
 
-<div class="bg-card p-6 rounded-xl">
+<div class="bg-white p-7 rounded-xl shadow card-hover">
 
-<h3 class="mb-3">
+<h3 class="text-xl font-bold mb-6">
 
-Technical
+Technical Skills
 
 </h3>
 
 
-<ul class="text-gray-400 space-y-2">
+<div id="technical-skills"
 
-<li>AutoCAD</li>
+class="space-y-6">
 
-<li>SAP2000</li>
-
-<li>Fusion360</li>
-
-<li>Excel</li>
-
-</ul>
+</div>
 
 </div>
 
 
 
-<div class="bg-card p-6 rounded-xl">
+<div class="bg-white p-7 rounded-xl shadow card-hover">
 
-<h3 class="mb-3">
+<h3 class="text-xl font-bold mb-6">
 
-Programming
+Professional Skills
 
 </h3>
 
 
-<ul class="text-gray-400">
+<div id="soft-skills"
 
-<li>C Programming</li>
-
-</ul>
+class="space-y-6">
 
 </div>
-
-
-
-<div class="bg-card p-6 rounded-xl">
-
-<h3 class="mb-3">
-
-Professional
-
-</h3>
-
-
-<ul class="text-gray-400">
-
-<li>Problem solving</li>
-
-<li>Teamwork</li>
-
-<li>Documentation</li>
-
-</ul>
 
 </div>
 
@@ -363,43 +451,60 @@ Professional
 
 
 
-<!-- PROJECT -->
+<section id="projects"
 
-<section class="max-w-6xl mx-auto py-16">
+class="mb-20">
 
-<h2 class="text-3xl mb-10 text-accent">
+<h2
+
+class="text-3xl mb-10 section-title">
 
 Projects
 
 </h2>
 
 
-<div class="grid md:grid-cols-2 gap-6">
+<div class="grid md:grid-cols-2 gap-8">
 
 
-<div class="bg-card p-7 rounded-xl hover:border-accent border border-slate-800">
+<div class="bg-white rounded-xl shadow card-hover p-7">
 
-<h3 class="text-xl mb-3">
+<h3 class="text-xl font-bold mb-3">
 
-CSEB Block Mould
+CSEB Compression Mould
 
 </h3>
 
 
-<p class="text-gray-400">
+<p class="text-gray-700 mb-4">
 
-Designed interchangeable mould system for
+Designed interchangeable mould system
 
-low cost sustainable housing construction.
+for cost-effective sustainable construction.
 
 </p>
 
 
-<div class="mt-5">
+<div>
 
-<span class="bg-green-900 px-3 py-1 rounded">
+<span
+
+class="bg-green-100 text-green-800
+
+px-3 py-1 rounded-full text-sm">
 
 Sustainability
+
+</span>
+
+
+<span
+
+class="bg-blue-100 text-blue-800
+
+px-3 py-1 rounded-full text-sm ml-2">
+
+Design
 
 </span>
 
@@ -408,66 +513,427 @@ Sustainability
 </div>
 
 
+
+<div class="bg-white rounded-xl shadow card-hover p-7">
+
+<h3 class="font-bold mb-2">
+
+Academic Technical Report
+
+</h3>
+
+
+<p class="text-gray-700 text-sm">
+
+Prepared technical report of G+7 building
+
+site visit and footing design using AutoCAD.
+
+</p>
+
+</div>
+
+
 </div>
 
 </section>
 
 
 
-<!-- CONTACT -->
+<section id="workshops"
 
-<section class="max-w-6xl mx-auto py-16">
+class="mb-20">
 
-<h2 class="text-3xl mb-10 text-accent">
+<h2
+
+class="text-3xl mb-10 section-title">
+
+Certifications
+
+</h2>
+
+
+<div id="workshops-container"
+
+class="grid md:grid-cols-2 gap-6">
+
+</div>
+
+</section>
+
+
+
+<section id="contact">
+
+<h2
+
+class="text-3xl mb-10 section-title">
 
 Contact
 
 </h2>
 
 
-<div class="bg-card p-8 rounded-xl">
+<div class="bg-white p-10 rounded-xl shadow-lg">
+
+<div class="grid md:grid-cols-2 gap-10">
+
+
+<div>
+
+<h3 class="font-bold text-xl mb-6">
+
+Contact Info
+
+</h3>
+
+
+<p class="mb-4">
+
+<i class="fas fa-phone text-primary"></i>
+
++91 9101602688
+
+</p>
+
+
+<p class="mb-4">
+
+<i class="fas fa-envelope text-primary"></i>
+
+abdullahalfaruqueahmed46@gmail.com
+
+</p>
+
+
+<p>
+
+<i class="fas fa-map-marker-alt text-primary"></i>
+
+India
+
+</p>
+
+</div>
+
+
+
+<div>
+
+<form id="contact-form"
+
+class="space-y-4">
+
 
 <input
 
 placeholder="Name"
 
-class="w-full bg-slate-900 p-3 mb-4 rounded">
+class="w-full border p-3 rounded-lg">
+
 
 <input
 
 placeholder="Email"
 
-class="w-full bg-slate-900 p-3 mb-4 rounded">
+class="w-full border p-3 rounded-lg">
 
 
 <textarea
 
+rows="4"
+
 placeholder="Message"
 
-class="w-full bg-slate-900 p-3 mb-4 rounded">
+class="w-full border p-3 rounded-lg">
 
 </textarea>
 
 
-<button class="bg-accent px-6 py-3 rounded">
+<button
+
+class="btn-main w-full text-white py-3 rounded-lg">
 
 Send Message
 
 </button>
+
+
+</form>
+
+</div>
+
+
+</div>
 
 </div>
 
 </section>
 
 
+</main>
 
-<!-- FOOTER -->
 
-<footer class="text-center p-10 text-gray-500">
 
-© 2026 Civil Engineering Portfolio
+<footer
+
+class="bg-dark text-white py-10 mt-20">
+
+<div
+
+class="container mx-auto px-6 text-center">
+
+<p class="text-gray-300">
+
+© 2026 Abdullah Ahmed
+
+</p>
+
+<p class="text-gray-400 text-sm mt-2">
+
+Civil Engineering Portfolio
+
+</p>
+
+</div>
 
 </footer>
+
+
+
+<script>
+
+
+const navigationItems=[
+
+{label:"Home",href:"#home"},
+
+{label:"Experience",href:"#experience"},
+
+{label:"Skills",href:"#skills"},
+
+{label:"Projects",href:"#projects"},
+
+{label:"Certifications",href:"#workshops"},
+
+{label:"Contact",href:"#contact"}
+
+];
+
+
+const expertiseTags=[
+
+"Highway Construction",
+
+"AutoCAD",
+
+"Structural Basics",
+
+"Technical Documentation",
+
+"Site Engineering"
+
+];
+
+
+const timelineData=[
+
+{
+
+year:"2023-Present",
+
+title:"NH Internship",
+
+description:"Exposure to highway construction workflow and materials.",
+
+icon:"fas fa-road"
+
+}
+
+];
+
+
+const technicalSkills=[
+
+{name:"AutoCAD",level:90},
+
+{name:"Excel",level:85},
+
+{name:"SAP2000",level:70},
+
+{name:"Fusion360",level:75}
+
+];
+
+
+const softSkills=[
+
+{name:"Problem Solving",level:90},
+
+{name:"Teamwork",level:85},
+
+{name:"Documentation",level:88}
+
+];
+
+
+const workshops=[
+
+{
+
+title:"GIS Certification",
+
+description:"GIS engineering applications",
+
+badge:"Certified"
+
+}
+
+];
+
+
+
+function renderNav(){
+
+nav-list.innerHTML=navigationItems
+
+.map(i=>`<li>
+
+<a href="${i.href}"
+
+class="hover:text-primary">
+
+${i.label}
+
+</a>
+
+</li>`).join('');
+
+}
+
+
+function renderTags(){
+
+expertise-tags.innerHTML=expertiseTags
+
+.map(t=>`<span
+
+class="bg-blue-100 text-primary
+
+px-3 py-1 rounded-full text-sm">
+
+${t}
+
+</span>`).join('');
+
+}
+
+
+function renderTimeline(){
+
+timeline-container.innerHTML=
+
+timelineData.map(i=>`
+
+<div class="timeline-item">
+
+<div class="bg-white p-6 rounded-xl shadow card-hover">
+
+<h3 class="font-bold">
+
+${i.title}
+
+</h3>
+
+<span class="text-secondary">
+
+${i.year}
+
+</span>
+
+<p class="mt-2 text-gray-700">
+
+${i.description}
+
+</p>
+
+</div>
+
+</div>
+
+`).join('');
+
+}
+
+
+function renderSkills(arr,id){
+
+document.getElementById(id)
+
+.innerHTML=arr.map(s=>`
+
+<div>
+
+<div class="flex justify-between">
+
+<span>${s.name}</span>
+
+<span>${s.level}%</span>
+
+</div>
+
+<div class="h-2 bg-gray-200 rounded">
+
+<div class="skill-bar h-2 rounded"
+
+data-level="${s.level}"
+
+style="width:0%">
+
+</div>
+
+</div>
+
+</div>
+
+`).join('');
+
+}
+
+
+document.addEventListener("DOMContentLoaded",()=>{
+
+renderNav();
+
+renderTags();
+
+renderTimeline();
+
+renderSkills(technicalSkills,"technical-skills");
+
+renderSkills(softSkills,"soft-skills");
+
+
+setTimeout(()=>{
+
+document
+
+.querySelectorAll(".skill-bar")
+
+.forEach(b=>{
+
+b.style.width=
+
+b.dataset.level+"%";
+
+});
+
+},300);
+
+});
+
+
+</script>
 
 
 

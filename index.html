@@ -1,257 +1,476 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Biswadev Kirtonia | Portfolio</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
 
-  <style>
-    :root {
-      --bg: #0f172a;
-      --text: #e2e8f0;
-      --card: #1e293b;
-      --accent: #38bdf8;
-    }
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    body.light {
-      --bg: #f1f5f9;
-      --text: #0f172a;
-      --card: #ffffff;
-    }
+<title>Civil Engineer Portfolio</title>
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
+<script src="https://cdn.tailwindcss.com"></script>
 
-    body {
-      background: var(--bg);
-      color: var(--text);
-      transition: 0.3s;
-      scroll-behavior: smooth;
-    }
+<link rel="stylesheet"
 
-    nav {
-      position: fixed;
-      width: 100%;
-      background: rgba(0,0,0,0.6);
-      padding: 10px;
-      text-align: center;
-      backdrop-filter: blur(10px);
-      z-index: 1000;
-    }
-
-    nav a {
-      margin: 0 15px;
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    nav button {
-      float: right;
-      margin-right: 20px;
-      background: var(--accent);
-      border: none;
-      padding: 5px 10px;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-
-    header {
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 3rem;
-      color: var(--accent);
-    }
-
-    header span {
-      color: #facc15;
-    }
-
-    section {
-      padding: 80px 10%;
-      opacity: 0;
-      transform: translateY(50px);
-      transition: 0.6s;
-    }
-
-    section.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    h2 {
-      margin-bottom: 20px;
-      color: var(--accent);
-    }
-
-    .card {
-      background: var(--card);
-      padding: 20px;
-      border-radius: 10px;
-      margin-bottom: 20px;
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: scale(1.03);
-    }
-
-    .skills-bar {
-      margin: 15px 0;
-    }
-
-    .bar {
-      background: #334155;
-      border-radius: 20px;
-      overflow: hidden;
-    }
-
-    .bar-fill {
-      height: 10px;
-      background: var(--accent);
-      width: 0;
-      transition: 1.5s;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-    }
-  </style>
-</head>
-
-<body>
-
-<nav>
-  <a href="#about">About</a>
-  <a href="#experience">Experience</a>
-  <a href="#skills">Skills</a>
-  <a href="#contact">Contact</a>
-  <button onclick="toggleTheme()">🌙</button>
-</nav>
-
-<header>
-  <div>
-    <h1>Biswadev Kirtonia</h1>
-    <p><span id="typing"></span></p>
-  </div>
-</header>
-
-<section id="about">
-  <h2>About Me</h2>
-  <div class="card">
-    I am a Civil Engineering student passionate about structural design, construction planning, and sustainable infrastructure.
-  </div>
-</section>
-
-<section id="experience">
-  <h2>Experience</h2>
-
-  <div class="card">
-    <h3>Site Visit Report</h3>
-    <p>Analyzed G+7 residential building structure and construction methods.</p>
-  </div>
-
-  <div class="card">
-    <h3>AutoCAD Project</h3>
-    <p>Designed footing layout with proper structural detailing.</p>
-  </div>
-
-</section>
-
-<section id="skills">
-  <h2>Skills</h2>
-
-  <div class="skills-bar">
-    <p>AutoCAD</p>
-    <div class="bar"><div class="bar-fill" data-width="90%"></div></div>
-  </div>
-
-  <div class="skills-bar">
-    <p>SAP2000</p>
-    <div class="bar"><div class="bar-fill" data-width="75%"></div></div>
-  </div>
-
-  <div class="skills-bar">
-    <p>MATLAB</p>
-    <div class="bar"><div class="bar-fill" data-width="70%"></div></div>
-  </div>
-
-  <div class="skills-bar">
-    <p>QGIS</p>
-    <div class="bar"><div class="bar-fill" data-width="65%"></div></div>
-  </div>
-
-</section>
-
-<section id="contact">
-  <h2>Contact</h2>
-  <div class="card">
-    📞 +91 60037 44621<br>
-    📧 biswadevkirtonia10@gmail.com
-  </div>
-</section>
-
-<footer>
-  <p>© 2026 Biswadev Kirtonia</p>
-</footer>
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <script>
-  // Typing Effect
-  const text = ["Civil Engineer", "AutoCAD Designer", "Structural Enthusiast"];
-  let i = 0, j = 0, current = "", isDeleting = false;
 
-  function type() {
-    current = text[i];
-    document.getElementById("typing").textContent = current.substring(0, j);
+tailwind.config = {
 
-    if (!isDeleting && j < current.length) {
-      j++;
-    } else if (isDeleting && j > 0) {
-      j--;
-    } else {
-      isDeleting = !isDeleting;
-      if (!isDeleting) i = (i + 1) % text.length;
-    }
+theme: {
 
-    setTimeout(type, isDeleting ? 50 : 100);
-  }
+extend: {
 
-  type();
+colors: {
 
-  // Scroll Animation
-  const sections = document.querySelectorAll("section");
+primary:"#020617",
 
-  window.addEventListener("scroll", () => {
-    sections.forEach(sec => {
-      if (window.scrollY > sec.offsetTop - 400) {
-        sec.classList.add("show");
-      }
-    });
+card:"#0b1120",
 
-    // Animate skill bars
-    document.querySelectorAll(".bar-fill").forEach(bar => {
-      bar.style.width = bar.dataset.width;
-    });
-  });
+accent:"#06b6d4",
 
-  // Dark Mode Toggle
-  function toggleTheme() {
-    document.body.classList.toggle("light");
-  }
+highlight:"#38bdf8",
+
+text:"#e2e8f0"
+
+}
+
+}
+
+}
+
+}
+
 </script>
 
-</body>
-</html>
+</head>
 
+<body class="bg-primary text-text">
+
+
+<!-- NAVBAR -->
+
+<header class="border-b border-slate-800">
+
+<div class="max-w-6xl mx-auto flex justify-between p-6">
+
+<h1 class="text-2xl font-bold text-accent">
+
+Abdullah Ahmed
+
+</h1>
+
+
+<nav class="space-x-8 text-gray-300">
+
+<a href="#" class="hover:text-accent">Home</a>
+
+<a href="#">Experience</a>
+
+<a href="#">Projects</a>
+
+<a href="#">Skills</a>
+
+<a href="#">Contact</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="max-w-6xl mx-auto py-20 grid md:grid-cols-2 gap-10">
+
+<div>
+
+<h2 class="text-5xl font-bold mb-6">
+
+Civil Engineering
+
+<span class="text-accent">
+
+Portfolio
+
+</span>
+
+</h2>
+
+
+<p class="text-gray-400 mb-8">
+
+Civil Engineering undergraduate focused on sustainable construction,
+
+structural planning and infrastructure development.
+
+Passionate about solving real construction challenges.
+
+</p>
+
+
+<div class="space-x-5">
+
+<button class="bg-accent px-6 py-3 rounded">
+
+View Work
+
+</button>
+
+
+<button class="border border-accent px-6 py-3 rounded">
+
+Contact
+
+</button>
+
+</div>
+
+
+<div class="mt-10 space-y-3 text-gray-400">
+
+<p>
+
+<i class="fa fa-phone text-accent"></i>
+
++91 XXXXXXXX
+
+</p>
+
+
+<p>
+
+<i class="fa fa-envelope text-accent"></i>
+
+email@gmail.com
+
+</p>
+
+</div>
+
+</div>
+
+
+
+<div class="bg-card p-8 rounded-xl shadow-xl">
+
+<h3 class="text-2xl mb-4 text-accent">
+
+Professional Summary
+
+</h3>
+
+
+<p class="text-gray-400">
+
+Strong academic background with exposure to highway
+
+engineering, AutoCAD design and construction workflow.
+
+Interested in infrastructure development roles.
+
+</p>
+
+
+<div class="mt-8">
+
+<h4 class="mb-3">
+
+Core Areas
+
+</h4>
+
+
+<div class="flex flex-wrap gap-3">
+
+<span class="bg-slate-800 px-3 py-1 rounded">
+
+AutoCAD
+
+</span>
+
+<span class="bg-slate-800 px-3 py-1 rounded">
+
+Highway Engineering
+
+</span>
+
+<span class="bg-slate-800 px-3 py-1 rounded">
+
+Structural Basics
+
+</span>
+
+<span class="bg-slate-800 px-3 py-1 rounded">
+
+Site Execution
+
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- EXPERIENCE -->
+
+<section class="max-w-6xl mx-auto py-16">
+
+<h2 class="text-3xl mb-10 text-accent">
+
+Experience
+
+</h2>
+
+
+<div class="grid gap-6">
+
+<div class="bg-card p-6 rounded-xl">
+
+<h3 class="text-xl">
+
+Highway Internship
+
+</h3>
+
+
+<p class="text-gray-400 mt-2">
+
+Worked on NH project exposure including
+
+material management and construction process.
+
+</p>
+
+</div>
+
+
+
+<div class="bg-card p-6 rounded-xl">
+
+<h3>
+
+Academic Engineering Work
+
+</h3>
+
+
+<p class="text-gray-400">
+
+Technical reports and structural observations.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- SKILLS -->
+
+<section class="max-w-6xl mx-auto py-16">
+
+<h2 class="text-3xl mb-10 text-accent">
+
+Skills
+
+</h2>
+
+
+
+<div class="grid md:grid-cols-3 gap-6">
+
+<div class="bg-card p-6 rounded-xl">
+
+<h3 class="mb-3">
+
+Technical
+
+</h3>
+
+
+<ul class="text-gray-400 space-y-2">
+
+<li>AutoCAD</li>
+
+<li>SAP2000</li>
+
+<li>Fusion360</li>
+
+<li>Excel</li>
+
+</ul>
+
+</div>
+
+
+
+<div class="bg-card p-6 rounded-xl">
+
+<h3 class="mb-3">
+
+Programming
+
+</h3>
+
+
+<ul class="text-gray-400">
+
+<li>C Programming</li>
+
+</ul>
+
+</div>
+
+
+
+<div class="bg-card p-6 rounded-xl">
+
+<h3 class="mb-3">
+
+Professional
+
+</h3>
+
+
+<ul class="text-gray-400">
+
+<li>Problem solving</li>
+
+<li>Teamwork</li>
+
+<li>Documentation</li>
+
+</ul>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- PROJECT -->
+
+<section class="max-w-6xl mx-auto py-16">
+
+<h2 class="text-3xl mb-10 text-accent">
+
+Projects
+
+</h2>
+
+
+<div class="grid md:grid-cols-2 gap-6">
+
+
+<div class="bg-card p-7 rounded-xl hover:border-accent border border-slate-800">
+
+<h3 class="text-xl mb-3">
+
+CSEB Block Mould
+
+</h3>
+
+
+<p class="text-gray-400">
+
+Designed interchangeable mould system for
+
+low cost sustainable housing construction.
+
+</p>
+
+
+<div class="mt-5">
+
+<span class="bg-green-900 px-3 py-1 rounded">
+
+Sustainability
+
+</span>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- CONTACT -->
+
+<section class="max-w-6xl mx-auto py-16">
+
+<h2 class="text-3xl mb-10 text-accent">
+
+Contact
+
+</h2>
+
+
+<div class="bg-card p-8 rounded-xl">
+
+<input
+
+placeholder="Name"
+
+class="w-full bg-slate-900 p-3 mb-4 rounded">
+
+<input
+
+placeholder="Email"
+
+class="w-full bg-slate-900 p-3 mb-4 rounded">
+
+
+<textarea
+
+placeholder="Message"
+
+class="w-full bg-slate-900 p-3 mb-4 rounded">
+
+</textarea>
+
+
+<button class="bg-accent px-6 py-3 rounded">
+
+Send Message
+
+</button>
+
+</div>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer class="text-center p-10 text-gray-500">
+
+© 2026 Civil Engineering Portfolio
+
+</footer>
+
+
+
+</body>
+
+</html>
